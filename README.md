@@ -1,2 +1,3 @@
-# challenges
-A set of interesting challenges 
+# Challenges
+
+- In this repository I will upload all the programming challenges that I am solving.
