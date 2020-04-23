@@ -1,34 +1,22 @@
+arreglo2 = [[1,4,2,5],[1,2,4,1],[2,3,3,1],[2,7,7,102]]
+
+
+arreglo3 = [[11, 2, 4],[4, 5, 6],[10, 8, -12]]
+
+
+
+
 def diagonalDifference(arr):
-    # Write your code here
-    total, diagonalA, diagonalB = 0, 0, 0
-    size = len(arr)
-    print("size:", size)
-    for i in range(size):
-        for j in range(size):
-            if i == j:
-                print(f"dA : arr[{i}][{j}]: {arr[i][j]}")
- 
-            count = (size - 1)
-            first = j
-            last = count
-            if first == (count):
-                print(f"dB: arr[{first}][{count}]: {arr[first][count]}")
-                last -= 1
-        #if arr[i][i] >= -100 and arr[i][i] <= 100:
-        '''diagonalA += arr[i][i]
-        print("d-A:", arr[i][i])
-    
-        for j in reversed(range(size)):
-            diagonalB += arr[i][j]
-            print("d-B ------>", arr[i][j])
-        '''
-    #total = abs(diagonalA - diagonalB)
-    #return total
-    #print (total)
+    left,right,i=0,0,0
+    n = len(arr)
+    while i != n:
+    	if arr[i][i] >= -100 and arr[i][i] <= 100:
+	        left+=arr[i][i]
+	        print (f"A [{i}][{i}]: {arr[i][i]}")
+	        right+=arr[i][n-1-i]
+	        print (f"------> B [{i}][{n-1-i}]: {arr[i][n-1-i]}")
+	        i+=1
+    print (abs(left-right))
 
 
-#arr = [[11 , 2, 4], [4, 5, 6], [10, 8, -12]]
-
-arr = [[-1,1,-7,-8], [-10,-8,-5,-2], [0,9,7,-1],[4,4,-2,1]]
-
-diagonalDifference(arr)
+diagonalDifference(arreglo3)
