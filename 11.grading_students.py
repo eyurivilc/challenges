@@ -12,7 +12,7 @@ def gradingStudents (grades):
 				if grades[i] < 38:
 					fgrades.append(grades[i])
 				else:
-					next_multiple = lambda n: int(n/5)+1
+					next_multiple = lambda n: (int(n/5)+1) * 5
 					diff_between = next_multiple(grades[i]) - grades[i]
 					if diff_between < 3:
 						fgrades.append(next_multiple(grades[i]))
